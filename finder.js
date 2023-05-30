@@ -19,10 +19,4 @@ function finderItem(data, element) {
   return finderData;
 }
 
-function createElement(tag, title) {
-  const elementTitle = document.createElement(tag);
-  elementTitle.textContent = title;
-  return elementTitle;
-}
-
 export default finderItem;

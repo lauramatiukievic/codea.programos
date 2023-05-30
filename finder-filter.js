@@ -3,8 +3,8 @@ import { finder_data, programs_data } from "./config.js";
 
 export default function finderFilter(finder) {
   const filteredProgram = programs_data.filter((program) => {
-    const { iconTitle, srcName, title, p, src, level, srcNext, imageTitle } = program;
-    if (iconTitle === "" || srcName === "" || srcName === "" || title === "" || p === "" || src === "" || level === "" || srcNext === "" || imageTitle === "") {
+    const { srcName, title, p, src, level, srcNext, imageTitle } = program;
+    if (srcName === "" || srcName === "" || title === "" || p === "" || src === "" || level === "" || srcNext === "" || imageTitle === "") {
       return false;
     }
     return true;

@@ -1,17 +1,22 @@
 export default function programsContent(data) {
   const { iconTitle, srcName, title, p, src, level, srcNext, imageTitle } = data;
-  if (iconTitle === "" || srcName === "" || srcName === "" || title === "" || p === "" || src === "" || level === "" || srcNext === "" || imageTitle === "") {
+  if (srcName === "" || srcName === "" || title === "" || p === "" || src === "" || level === "" || srcNext === "" || imageTitle === "") {
     return;
   }
   const programsContainer = document.createElement("div");
   programsContainer.classList.add("programs", `col`);
 
-  const rightButton = document.createElement("div");
-  rightButton.classList.add("right-pink");
-  const sideText = document.createElement("div");
-  sideText.classList.add("right-icon");
-  sideText.textContent = iconTitle;
-  rightButton.append(sideText);
+  if (iconTitle !== "") {
+    const rightButton = document.createElement("div");
+    rightButton.classList.add("right-pink");
+    const sideText = document.createElement("div");
+    sideText.classList.add("right-icon");
+
+    rightButton.append(sideText);
+    sideText.textContent = iconTitle;
+    programsContainer.append(rightButton);
+  }
+
   const programDiv = document.createElement("div");
   programDiv.classList.add("program-icon");
   const programImage = document.createElement("img");
@@ -50,7 +55,7 @@ export default function programsContent(data) {
   levelIcon.append(levelImage, levelTitle);
   levelDiv.append(levelIcon);
   iconContainer.append(levelDiv, timeDiv);
-  programsContainer.append(rightButton, programDiv, programTitle, programPara, iconContainer);
+  programsContainer.append(programDiv, programTitle, programPara, iconContainer);
 
   return programsContainer;
 }
