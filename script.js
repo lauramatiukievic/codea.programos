@@ -1,4 +1,3 @@
-console.log("ar veikia");
 import finderWrapper from "./finder-wrapper.js";
 import programsWrapper from "./programs-wrapper.js";
 import titleWrapper from "./title-wrapper.js";
