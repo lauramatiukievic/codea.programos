@@ -1,8 +1,8 @@
-export default function titleWrapper() {
+export default function titleWrapper(title) {
   const titleWrapper = document.createElement("div");
   titleWrapper.classList.add("col-12");
   const programsTitle = document.createElement("h1");
-  programsTitle.innerHTML = "Programos";
+  programsTitle.textContent = title;
 
   const firstBanner = document.createElement("div");
   firstBanner.classList.add("banner", "col-12");

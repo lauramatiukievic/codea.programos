@@ -1,6 +1,6 @@
-import { finder_data, finder_timeData } from "./config.js";
-import finderItem from "./finder.js";
-import finderTimeItem from "./finder-time.js";
+import finderSection from "./finder-section.js";
+
+import finderFilter from "./finder-filter.js";
 export default function finderWrapper() {
   const finderContainer = document.createElement("div");
   finderContainer.classList.add("col-4", "row");
@@ -11,22 +11,9 @@ export default function finderWrapper() {
   const finder = document.createElement("div");
   finder.classList.add("finder", "col-12");
 
-  const finderTitle = document.createElement("h2");
-  finderTitle.innerHTML = `Rastos 48 programos`;
-  finder.append(finderTitle);
-  finder_data.forEach((finderData) => {
-    const finderItemElement = finderItem(finderData);
-    finder.append(finderItemElement);
-  });
+  finderFilter(finder);
 
-  const timeTitle = document.createElement("h3");
-  timeTitle.classList.add("time");
-  timeTitle.innerHTML = "Laikas";
-  finder.append(timeTitle);
-  finder_timeData.forEach((finderTimeData) => {
-    const finderTimeElement = finderTimeItem(finderTimeData);
-    finder.append(finderTimeElement);
-  });
+  finderSection(finder);
 
   const finderButtonElement = document.createElement("div");
 

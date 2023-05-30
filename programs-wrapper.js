@@ -8,8 +8,8 @@ export default function programsWrapper() {
   const programsContainer = document.createElement("div");
   programsContainer.classList.add("row", `gap-3`);
 
-  programs_data.forEach((programs) => {
-    const programsData = programsContent(programs);
+  programs_data.forEach((program) => {
+    const programsData = programsContent(program);
     programsContainer.append(programsData);
   });
   programItem.append(programsContainer);

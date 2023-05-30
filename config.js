@@ -1,12 +1,12 @@
 export const finder_data = [
   {
-    h3: "Tema",
+    title: "Tema",
   },
   {
-    h3: "Vieta",
+    title: "Vieta",
   },
   {
-    h3: "Tipas",
+    title: "Tipas",
   },
 ];
 
