@@ -1,5 +1,8 @@
 export default function programsContent(data) {
   const { iconTitle, srcName, title, p, src, level, srcNext, imageTitle } = data;
+  if (iconTitle === "" || srcName === "" || srcName === "" || title === "" || p === "" || src === "" || level === "" || srcNext === "" || imageTitle === "") {
+    return;
+  }
   const programsContainer = document.createElement("div");
   programsContainer.classList.add("programs", `col`);
 

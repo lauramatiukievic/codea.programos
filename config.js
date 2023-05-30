@@ -81,4 +81,14 @@ export const programs_data = [
     srcNext: `img/moon.svg`,
     imageTitle: "VAKARAIS",
   },
+  {
+    iconTitle: "",
+    srcName: `img/python.svg`,
+    title: ``,
+    p: "",
+    src: `img/download.svg`,
+    level: "1 LYGIS",
+    srcNext: `img/moon.svg`,
+    imageTitle: "VAKARAIS",
+  },
 ];

@@ -10,7 +10,9 @@ export default function programsWrapper() {
 
   programs_data.forEach((program) => {
     const programsData = programsContent(program);
-    programsContainer.append(programsData);
+    if (programsData) {
+      programsContainer.append(programsData);
+    }
   });
   programItem.append(programsContainer);
   return programItem;

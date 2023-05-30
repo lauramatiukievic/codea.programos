@@ -11,14 +11,14 @@ export default function finderWrapper() {
   const finder = document.createElement("div");
   finder.classList.add("finder", "col-12");
 
-  finderFilter(finder);
-
-  finderSection(finder);
-
   const finderButtonElement = document.createElement("div");
 
   finderButtonElement.classList.add("button");
   finderButtonElement.textContent = "Išvalyti";
+
+  finderFilter(finder);
+
+  finderSection(finder);
 
   finder.append(finderButtonElement);
   finderContent.append(finder);
